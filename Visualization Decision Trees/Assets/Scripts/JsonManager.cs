@@ -15,16 +15,22 @@ public class JsonManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null)
+        if (instance == null)
+        {
             instance = this;
-        else if (instance != this) ;
-            //Destroy(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        string tmp = File.ReadAllText(path);
+        tree = JsonUtility.FromJson<Node>(tmp);
     }
 
     void Start()
     {
-        string tmp = File.ReadAllText(path);
-        tree = JsonUtility.FromJson<Node>(tmp);
+
     }
 
 }
