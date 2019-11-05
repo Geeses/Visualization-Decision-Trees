@@ -14,17 +14,14 @@ public class VisualizationManager : MonoBehaviour
     [SerializeField]
     private Node tree;
     
-    IEnumerator Start()
+    void Start()
     {
-        // wait until tree is assignet to cache the value
-        yield return new WaitUntil(() => tree != null);
-
         tree = JsonManager.instance.tree;
 
-        VisualizeTree();
+        VisualizeTree(tree);
     }
 
-    public void VisualizeTree()
+    public void VisualizeTree(Node _tree)
     {
         if (tree != null)
         {
@@ -39,12 +36,14 @@ public class VisualizationManager : MonoBehaviour
     void CreateNode(Node node, Vector3 position, float _edgeLength, float _nodeDistance)
     {
         GameObject tmp = Instantiate(nodeObject, position + new Vector3(_nodeDistance, -_edgeLength, 0), Quaternion.identity);
+        NodeObject tmpNode = tmp.GetComponent<NodeObject>();
+        tmpNode.node = node;
 
-        foreach(Node child in node.children)
+        for (int i = 0; i < node.children.Length; i++)
         {
-            if (child != null)
+            if (node.children[i] != null)
             {
-                CreateNode(child, tmp.transform.position, _edgeLength, _nodeDistance);
+                CreateNode(node.children[i], tmp.transform.position, _edgeLength, _nodeDistance);
             }
         }
     }
