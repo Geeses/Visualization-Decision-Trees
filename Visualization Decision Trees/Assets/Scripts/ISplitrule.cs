@@ -1,4 +1,8 @@
-﻿public interface ISplitrule
+﻿using System.Collections.Generic;
+using ReadWriteCsv;
+using System;
+
+public interface ISplitrule
 {
-    void Execute();
+    bool Execute(CsvRow row, string attribute, string split);
 }

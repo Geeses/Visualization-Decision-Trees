@@ -3,8 +3,7 @@
 [Serializable]
 public class Node
 {
-    public Node[] children;
     public ISplitrule splitRule;
-    public string branch;
-    public string content;
+    public string attribute;
+    public Edge[] children;
 }

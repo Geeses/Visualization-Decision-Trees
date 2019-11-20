@@ -46,11 +46,15 @@ MonoBehaviour:
   treePath: E:\Unity Workspace\Visualization Decision Trees\Visualization Decision
     Trees\Assets\text.json
   dataPath: E:\Unity Workspace\Visualization Decision Trees\Visualization Decision
-    Trees\Assets\data.json
+    Trees\Assets\data.csv
   tree:
     children:
     - children: []
+      branch: 
       content: 
     - children: []
+      branch: 
       content: 
+    branch: 
     content: 
+  data: 
