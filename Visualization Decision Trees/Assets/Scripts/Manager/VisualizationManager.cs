@@ -10,6 +10,8 @@ public class VisualizationManager : MonoBehaviour
 
     public GameObject nodeObject;
 
+    public EdgeObject edgeObject;
+
     public float edgeLength = 1f;
     public float nodeDistance = 2f;
 
@@ -49,11 +51,6 @@ public class VisualizationManager : MonoBehaviour
 
             for (int j = 0; j < newData.Count; j++)
             {
-                string s = "";
-                foreach (var item in newData[j])
-                {
-                    s += item + " ";
-                }
                 if (!root.node.splitRule.Execute(newData[j], root.node.attribute, root.node.children[i].split))
                 {
                     newData.RemoveAt(j);
@@ -123,6 +120,13 @@ public class VisualizationManager : MonoBehaviour
         {
             if (node.children[i] != null)
             {
+                // set up the edge
+                EdgeObject edge = Instantiate(edgeObject);
+                edge.transform.SetParent(go.transform);
+
+                nodeObj.edges.Add(edge);
+                edge.splitText.text = node.children[i].split;
+                
                 CreateNodes(node.children[i].targetNode, nodeObj);
             }
         }
@@ -150,6 +154,12 @@ public class VisualizationManager : MonoBehaviour
             //              Childcount represents the number of ALL children the node has, so even the children of the child.
             //              Thats why we multiply it with the childCount, to give a node additional space if it has alot of children. (it needs the +1 because of leaf nodes that have no children)
             Vector3 newPosition = new Vector3((((i+1 / tmpNode.childrenObjects.Count) * nodeDistance) - nodeDistance/2) * (tmpNode.childrenObjects[i].childCount + 1), -edgeLength, 0);
+
+            // Place the edges
+            // Place its text into the middle of the edge
+            tmpNode.edges[i].splitText.gameObject.transform.localPosition = newPosition / 2;
+            tmpNode.edges[i].edgeRenderer.SetPosition(1, newPosition);
+
             PlaceNodes(tmpNode.childrenObjects[i], newPosition);
         }
     }

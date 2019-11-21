@@ -431,20 +431,10 @@ PrefabInstance:
       objectReference: {fileID: 1340540074}
     - target: {fileID: 4981203232754276054, guid: b360e87767cc3c444b9bd47a51c15c40,
         type: 3}
-      propertyPath: nodeObject
+      propertyPath: edgeObject
       value: 
-      objectReference: {fileID: 1523352121816089911, guid: 0912fa31f77d4d64eb37a0135fe435b6,
+      objectReference: {fileID: 6137085652696949386, guid: e03bf8e35f3824a48bb4b0dcc2a41682,
         type: 3}
-    - target: {fileID: 4981203232754276054, guid: b360e87767cc3c444b9bd47a51c15c40,
-        type: 3}
-      propertyPath: edgeLength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981203232754276054, guid: b360e87767cc3c444b9bd47a51c15c40,
-        type: 3}
-      propertyPath: flowData
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b360e87767cc3c444b9bd47a51c15c40, type: 3}
 --- !u!4 &2924839672714713919 stripped

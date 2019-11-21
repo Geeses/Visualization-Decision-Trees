@@ -9,6 +9,7 @@ public class NodeObject : MonoBehaviour
     public Node node;
     public NodeObject parent;
     public List<NodeObject> childrenObjects;
+    public List<EdgeObject> edges;
 
     // the number of of all children of the node, used to calculate space between the nodes
     public int childCount;
@@ -26,13 +27,7 @@ public class NodeObject : MonoBehaviour
 
     void Update()
     {
-        samplesText.text = samples.Count.ToString();
-
-        if(childCount != 0)
-            attributeText.text = node.attribute + node.children[0].split;
-        else
-        {
-            attributeText.text = node.attribute;
-        }
+        samplesText.text = "Samples: " + samples.Count.ToString();
+        attributeText.text = "Attribute: " + node.attribute;
     }
 }

@@ -43,3 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f998b1012c0ada4458694f168912a65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPoint: {fileID: 0}
+  nodeObject: {fileID: 1523352121816089911, guid: 0912fa31f77d4d64eb37a0135fe435b6,
+    type: 3}
+  edgeObject: {fileID: 5955692996593100813, guid: e03bf8e35f3824a48bb4b0dcc2a41682,
+    type: 3}
+  edgeLength: 2
+  nodeDistance: 2
+  flowData: 0
+  tree:
+    attribute: 
