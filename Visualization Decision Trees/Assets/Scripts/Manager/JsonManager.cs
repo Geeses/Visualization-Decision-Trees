@@ -7,7 +7,6 @@ using ReadWriteCsv;
 using System;
 using System.Data;
 using CsvHelper;
-using System.Data.SqlClient;
 
 public class JsonManager : MonoBehaviour
 {
@@ -17,12 +16,12 @@ public class JsonManager : MonoBehaviour
     public static JsonManager instance;
 
     // this is the whole tree
-    public Node tree;
-    public DataTable dataRows;
+    public Tree tree;
+    public DataTable data;
 
     void Awake()
     {
-        dataRows = new DataTable();
+        data = new DataTable();
 
         if (instance == null)
         {
@@ -36,13 +35,16 @@ public class JsonManager : MonoBehaviour
         using (var reader = new StreamReader(dataPath))
         using (var csv = new CsvReader(reader))
         {
-
             using (var dr = new CsvDataReader(csv))
             {
-                dataRows.Load(dr);
+                data.Load(dr);
             }
         }
-
+        //TODO: Read it in manually to not rely on the deserializer of the node
+        tree = JsonConvert.DeserializeObject<Tree>(File.ReadAllText(treePath), new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        });
     }
 
 }

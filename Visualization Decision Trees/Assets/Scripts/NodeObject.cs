@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using ReadWriteCsv;
+using System.Data;
 
 public class NodeObject : MonoBehaviour
 {
     public Node node;
     public NodeObject parent;
+    public ISplitrule splitRule;
+
     public List<NodeObject> childrenObjects;
     public List<EdgeObject> edges;
 
@@ -18,16 +21,33 @@ public class NodeObject : MonoBehaviour
 
     public TextMeshPro attributeText;
 
-    public List<CsvRow> samples;
+    public DataTable samples;
 
     void Awake()
     {
-        samples = new List<CsvRow>();
+        samples = new DataTable();
     }
 
     void Update()
     {
-        samplesText.text = "Samples: " + samples.Count.ToString();
+        samplesText.text = "Samples: " + samples.Rows.Count;
         attributeText.text = "Attribute: " + node.attribute;
+    }
+
+    public void DetectSplitrule()
+    {
+        ISplitrule split = new UndefinedSplit();
+
+        if (node.splitRule.ToLower().Equals("numericalsplit"))
+        {
+            split = new NumericalSplit();
+        }
+        //else if (_splitRule.ToLower().Equals("categoricalsplit"))
+        //{
+        //    split = new CategoricalSplit();
+        //}
+
+        splitRule = split;
+        
     }
 }

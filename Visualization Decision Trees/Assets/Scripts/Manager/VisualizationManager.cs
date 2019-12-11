@@ -19,7 +19,7 @@ public class VisualizationManager : MonoBehaviour
     public bool flowData;
 
     [SerializeField]
-    private Node tree;
+    private Tree tree;
 
     private List<NodeObject> nodes;
     
@@ -38,26 +38,27 @@ public class VisualizationManager : MonoBehaviour
         yield return new WaitUntil(() => flowData);
 
         DataTable data = new DataTable();
-        data = JsonManager.instance.dataRows;
+        data = JsonManager.instance.data.Copy();
 
-        //StartCoroutine(Evaluate(data, nodes[0]));
+        StartCoroutine(Evaluate(data, nodes[0]));
+    }
 
-    }   
-
-    IEnumerator Evaluate(List<CsvRow> data, NodeObject root)
+    IEnumerator Evaluate(DataTable data, NodeObject root)
     {
-        root.samples = new List<CsvRow>(data);
+        // we want to give the node all the data, which will not be touched, so we can display what went through
+        root.samples = data.Copy();
+
         for (int i = 0; i < root.childrenObjects.Count; i++)
         {
-            List<CsvRow> newData = new List<CsvRow>(data);
+            DataTable newData = data.Copy();
 
-            for (int j = 0; j < newData.Count; j++)
+            for (int j = newData.Rows.Count - 1; j > 0; j--)
             {
-                //if (!root.node.splitRule.Execute(newData[j], root.node.attribute, root.node.children[i].split))
-                //{
-                //    newData.RemoveAt(j);
-                //    j -= 1;
-                //}
+                if (!root.splitRule.Execute(newData.Rows[j], root.node.attribute, root.node.children[i].split))
+                {
+                    newData.Rows[j].Delete();
+                    newData.AcceptChanges();
+                }
                 root.childrenObjects[i].samples = newData;
                 yield return new WaitForEndOfFrame();
             }
@@ -66,11 +67,11 @@ public class VisualizationManager : MonoBehaviour
         }
     }
 
-    public void VisualizeTree(Node _tree)
+    public void VisualizeTree(Tree _tree)
     {
         if (_tree != null)
         {
-            CreateNodes(_tree, null);
+            CreateNodes(_tree.headNode, null);
             PlaceNodes(nodes[0], startPoint.position);
         }
         else
@@ -85,6 +86,9 @@ public class VisualizationManager : MonoBehaviour
         NodeObject nodeObj = go.GetComponent<NodeObject>();
         nodes.Add(nodeObj);
         nodeObj.node = node;
+
+        // Up until now, the splitrule is only a string, we want to know which actual class the rule belongs to
+        nodeObj.DetectSplitrule();
 
         nodeObj.parent = parent;
 
