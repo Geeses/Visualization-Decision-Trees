@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ReadWriteCsv;
 using System.Text.RegularExpressions;
+using System.Data;
 
 public class VisualizationManager : MonoBehaviour
 {
@@ -36,9 +37,10 @@ public class VisualizationManager : MonoBehaviour
     {
         yield return new WaitUntil(() => flowData);
 
-        List<CsvRow> data = new List<CsvRow>(JsonManager.instance.dataRows);
+        DataTable data = new DataTable();
+        data = JsonManager.instance.dataRows;
 
-        StartCoroutine(Evaluate(data, nodes[0]));
+        //StartCoroutine(Evaluate(data, nodes[0]));
 
     }   
 
@@ -51,11 +53,11 @@ public class VisualizationManager : MonoBehaviour
 
             for (int j = 0; j < newData.Count; j++)
             {
-                if (!root.node.splitRule.Execute(newData[j], root.node.attribute, root.node.children[i].split))
-                {
-                    newData.RemoveAt(j);
-                    j -= 1;
-                }
+                //if (!root.node.splitRule.Execute(newData[j], root.node.attribute, root.node.children[i].split))
+                //{
+                //    newData.RemoveAt(j);
+                //    j -= 1;
+                //}
                 root.childrenObjects[i].samples = newData;
                 yield return new WaitForEndOfFrame();
             }

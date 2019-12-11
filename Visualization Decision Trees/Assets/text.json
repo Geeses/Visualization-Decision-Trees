@@ -1,112 +1,110 @@
 {
-  "splitRule": {
-    "$type": "NumericalSplit, Assembly-CSharp"
-  },
-  "attribute": "size",
-  "children": [
-    {
-      "targetNode": {
-        "splitRule": {
-          "$type": "NumericalSplit, Assembly-CSharp"
+  "headNode": {
+    "splitRule": "NumericalSplit",
+    "attribute": "size",
+    "children": [
+      {
+        "targetNode": {
+          "splitRule": "NumericalSplit",
+          "attribute": "age",
+          "children": [
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "weight",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Healthy",
+                      "children": [
+                        null,
+                        null
+                      ]
+                    },
+                    "split": "<70"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Sick",
+                      "children": [
+                        null,
+                        null
+                      ]
+                    },
+                    "split": ">=70"
+                  }
+                ]
+              },
+              "split": "<50"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "IQ",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Sick",
+                      "children": [
+                        null,
+                        null
+                      ]
+                    },
+                    "split": "==80"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Healthy",
+                      "children": [
+                        null,
+                        null
+                      ]
+                    },
+                    "split": "!=80"
+                  }
+                ]
+              },
+              "split": ">=50"
+            }
+          ]
         },
-        "attribute": "age",
-        "children": [
-          {
-            "targetNode": {
-              "splitRule": {
-                "$type": "NumericalSplit, Assembly-CSharp"
-              },
-              "attribute": "weight",
-              "children": [
-                {
-                  "targetNode": {
-                    "splitRule": {
-                      "$type": "NumericalSplit, Assembly-CSharp"
-                    },
-                    "attribute": "Healthy",
-                    "children": null
-                  },
-                  "split": "<70"
-                },
-                {
-                  "targetNode": {
-                    "splitRule": {
-                      "$type": "NumericalSplit, Assembly-CSharp"
-                    },
-                    "attribute": "Sick",
-                    "children": null
-                  },
-                  "split": ">=70"
-                }
-              ]
-            },
-            "split": "<50"
-          },
-          {
-            "targetNode": {
-              "splitRule": {
-                "$type": "NumericalSplit, Assembly-CSharp"
-              },
-              "attribute": "IQ",
-              "children": [
-                {
-                  "targetNode": {
-                    "splitRule": {
-                      "$type": "NumericalSplit, Assembly-CSharp"
-                    },
-                    "attribute": "Sick",
-                    "children": null
-                  },
-                  "split": "==80"
-                },
-                {
-                  "targetNode": {
-                    "splitRule": {
-                      "$type": "NumericalSplit, Assembly-CSharp"
-                    },
-                    "attribute": "Healthy",
-                    "children": null
-                  },
-                  "split": "!=80"
-                }
-              ]
-            },
-            "split": ">=50"
-          }
-        ]
+        "split": ">1,60"
       },
-      "split": ">1,60"
-    },
-    {
-      "targetNode": {
-        "splitRule": {
-          "$type": "NumericalSplit, Assembly-CSharp"
+      {
+        "targetNode": {
+          "splitRule": "NumericalSplit",
+          "attribute": "age",
+          "children": [
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Healthy",
+                "children": [
+                  null,
+                  null
+                ]
+              },
+              "split": ">30"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Sick",
+                "children": [
+                  null,
+                  null
+                ]
+              },
+              "split": "<=30"
+            }
+          ]
         },
-        "attribute": "age",
-        "children": [
-          {
-            "targetNode": {
-              "splitRule": {
-                "$type": "NumericalSplit, Assembly-CSharp"
-              },
-              "attribute": "Healthy",
-              "children": null
-            },
-            "split": ">30"
-          },
-          {
-            "targetNode": {
-              "splitRule": {
-                "$type": "NumericalSplit, Assembly-CSharp"
-              },
-              "attribute": "Sick",
-              "children": null
-            },
-            "split": "<=30"
-          }
-        ]
-      },
-      "split": "<=1,60"
-    }
-  ]
+        "split": "<=1,60"
+      }
+    ]
+  }
 }

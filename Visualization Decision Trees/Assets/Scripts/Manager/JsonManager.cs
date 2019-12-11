@@ -5,6 +5,9 @@ using UnityEngine;
 using System.IO;
 using ReadWriteCsv;
 using System;
+using System.Data;
+using CsvHelper;
+using System.Data.SqlClient;
 
 public class JsonManager : MonoBehaviour
 {
@@ -15,11 +18,11 @@ public class JsonManager : MonoBehaviour
 
     // this is the whole tree
     public Node tree;
-    public List<CsvRow> dataRows;
+    public DataTable dataRows;
 
     void Awake()
     {
-        dataRows = new List<CsvRow>();
+        dataRows = new DataTable();
 
         if (instance == null)
         {
@@ -30,30 +33,16 @@ public class JsonManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        string tmp = File.ReadAllText(treePath);
-        tree = JsonConvert.DeserializeObject<Node>(tmp, new JsonSerializerSettings()
+        using (var reader = new StreamReader(dataPath))
+        using (var csv = new CsvReader(reader))
         {
-            TypeNameHandling = TypeNameHandling.Auto
-        });
-        //tmp = File.ReadAllText(dataPath);
-        //data = tmp;
-        using (CsvFileReader reader = new CsvFileReader(dataPath))
-        {
-            CsvRow row = new CsvRow();
-            while (reader.ReadRow(row))
+
+            using (var dr = new CsvDataReader(csv))
             {
-                dataRows.Add(row);
-                row = new CsvRow();
+                dataRows.Load(dr);
             }
         }
-    }
 
-    void Start()
-    {
-        /*foreach (var row in dataRows)
-        {
-            Debug.Log(String.Join(", ", row.ToArray()));
-        } */
     }
 
 }

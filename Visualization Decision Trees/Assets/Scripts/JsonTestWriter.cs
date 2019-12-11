@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using Valve.Newtonsoft.Json;
 using UnityEngine;
-using ReadWriteCsv;
+using CsvHelper;
+using System.IO;
+using System.Data;
+using System.Dynamic;
 
 public class JsonTestWriter : MonoBehaviour
 {
@@ -16,53 +19,50 @@ public class JsonTestWriter : MonoBehaviour
 
         WriteTestNodes();
         WriteTestData(1000);
+        
+        
+
     }
 
     void WriteTestData(int count)
     {
-        
-        using (CsvFileWriter writer = new CsvFileWriter(JsonManager.instance.dataPath))
+        var records = new List<dynamic>();
+
+        dynamic record;
+
+        for (int i = 0; i < count; i++)
         {
-            for (int i = 0; i < count; i++)
-            {                
-                CsvRow row = new CsvRow();
-                row.Add("age");
-                row.Add(Random.Range(18, 70).ToString());
-                row.Add("size");
-                row.Add(Random.Range(1.20f, 2.10f).ToString());
-                row.Add("IQ");
-                row.Add(Random.Range(50, 120).ToString());
-                row.Add("weight");
-                row.Add(Random.Range(50, 120).ToString());
-                writer.WriteRow(row);                
-            }
+            record = new ExpandoObject();
+            record.age = (Random.Range(18, 70).ToString());
+            record.size = (Random.Range(1.20f, 2.10f).ToString());
+            record.IQ = (Random.Range(50, 120).ToString());
+            record.weight = (Random.Range(50, 120).ToString());
+            records.Add(record);
+        }
+
+        using (var writer = new StreamWriter(JsonManager.instance.dataPath))
+        using (var csv = new CsvWriter(writer))
+        {
+            csv.WriteRecords(records);            
         }
     }
 
     void WriteTestNodes()
     {
+        Tree tree = new Tree();
         Node node = new Node();
-        node.splitRule = new NumericalSplit();
+        tree.headNode = node;
+
         Node node1 = new Node();
-        node1.splitRule = new NumericalSplit();
         Node node2 = new Node();
-        node2.splitRule = new NumericalSplit();
         Node node3 = new Node();
-        node3.splitRule = new NumericalSplit();
         Node node4 = new Node();
-        node4.splitRule = new NumericalSplit();
         Node node5 = new Node();
-        node5.splitRule = new NumericalSplit();
         Node node6 = new Node();
-        node6.splitRule = new NumericalSplit();
         Node node7 = new Node();
-        node7.splitRule = new NumericalSplit();
         Node node8 = new Node();
-        node8.splitRule = new NumericalSplit();
         Node node9 = new Node();
-        node9.splitRule = new NumericalSplit();
         Node node10 = new Node();
-        node10.splitRule = new NumericalSplit();
 
         node.attribute = "size";
 
@@ -109,13 +109,13 @@ public class JsonTestWriter : MonoBehaviour
         node9.attribute = "Sick";
         node10.attribute = "Healthy";
 
-        string json = JsonConvert.SerializeObject(node, new JsonSerializerSettings()
+        string json = JsonConvert.SerializeObject(tree, new JsonSerializerSettings()
         {
             TypeNameHandling = TypeNameHandling.Auto,
             Formatting = Formatting.Indented
         });
 
-        System.IO.File.WriteAllText(@"E:\Unity Workspace\Visualization Decision Trees\Visualization Decision Trees\Assets\text.json", json);
+        File.WriteAllText(@"E:\Unity Workspace\Visualization Decision Trees\Visualization Decision Trees\Assets\text.json", json);
     }
 }
 

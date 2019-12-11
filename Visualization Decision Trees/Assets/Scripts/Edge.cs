@@ -6,4 +6,16 @@ public class Edge
 {
     public Node targetNode;
     public string split;
+
+    public Edge()
+    {
+        targetNode = new Node();
+        split = "Empty";
+    }
+
+    public Edge(Node _targetNode, string _split)
+    {
+        targetNode = _targetNode;
+        split = _split;
+    }
 }
