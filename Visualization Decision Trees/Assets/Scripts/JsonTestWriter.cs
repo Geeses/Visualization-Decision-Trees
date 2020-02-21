@@ -9,18 +9,30 @@ using System.Dynamic;
 
 public class JsonTestWriter : MonoBehaviour
 {
-    public bool WriteFile;
+    public bool WriteModel;
+    public bool WriteData;
 
     void Awake()
     {
         // stop start function if writefile is false
-        if (!WriteFile)
-            return;
+        if (WriteModel)
+        {
+            Tree tree = new Tree();
+            WriteTestNodes(5, tree.headNode, 2, 5);
+            //WriteTestNodes(tree);
 
-        WriteTestNodes();
-        WriteTestData(1000);
-        
-        
+            string json = JsonConvert.SerializeObject(tree, new JsonSerializerSettings()
+            {
+                TypeNameHandling = TypeNameHandling.Auto,
+                Formatting = Formatting.Indented
+            });
+
+            File.WriteAllText(@"E:\Unity Workspace\Visualization Decision Trees\Visualization Decision Trees\Assets\text.json", json);
+        }
+        if (WriteData)
+        {
+            WriteTestData(1000);
+        }
 
     }
 
@@ -47,9 +59,26 @@ public class JsonTestWriter : MonoBehaviour
         }
     }
 
-    void WriteTestNodes()
+    void WriteTestNodes(int layerCount, Node node, int minChildCount, int maxChildCount)
     {
-        Tree tree = new Tree();
+        layerCount--;
+
+        int currentChildCount = Random.Range(minChildCount, maxChildCount);
+        node.children = new Edge[currentChildCount];
+
+        if (layerCount != 0)
+        {
+            for(int i = 0; i < currentChildCount; i++)
+            {
+                node.children[i] = new Edge();
+                node.children[i].targetNode = new Node();
+                WriteTestNodes(layerCount, node.children[i].targetNode, minChildCount, maxChildCount);
+            }
+        }
+    }
+
+    void WriteTestNodes(Tree tree)
+    {
         Node node = new Node();
         tree.headNode = node;
 
@@ -108,14 +137,6 @@ public class JsonTestWriter : MonoBehaviour
         node8.attribute = "Sick";
         node9.attribute = "Sick";
         node10.attribute = "Healthy";
-
-        string json = JsonConvert.SerializeObject(tree, new JsonSerializerSettings()
-        {
-            TypeNameHandling = TypeNameHandling.Auto,
-            Formatting = Formatting.Indented
-        });
-
-        File.WriteAllText(@"E:\Unity Workspace\Visualization Decision Trees\Visualization Decision Trees\Assets\text.json", json);
     }
 }
 

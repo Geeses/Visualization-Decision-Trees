@@ -1,109 +1,1547 @@
 {
   "headNode": {
     "splitRule": "NumericalSplit",
-    "attribute": "size",
+    "attribute": "Empty",
     "children": [
       {
         "targetNode": {
           "splitRule": "NumericalSplit",
-          "attribute": "age",
+          "attribute": "Empty",
           "children": [
             {
               "targetNode": {
                 "splitRule": "NumericalSplit",
-                "attribute": "weight",
+                "attribute": "Empty",
                 "children": [
                   {
                     "targetNode": {
                       "splitRule": "NumericalSplit",
-                      "attribute": "Healthy",
+                      "attribute": "Empty",
                       "children": [
-                        null,
-                        null
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
                       ]
                     },
-                    "split": "<70"
+                    "split": "Empty"
                   },
                   {
                     "targetNode": {
                       "splitRule": "NumericalSplit",
-                      "attribute": "Sick",
+                      "attribute": "Empty",
                       "children": [
-                        null,
-                        null
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
                       ]
                     },
-                    "split": ">=70"
+                    "split": "Empty"
                   }
                 ]
               },
-              "split": "<50"
+              "split": "Empty"
             },
             {
               "targetNode": {
                 "splitRule": "NumericalSplit",
-                "attribute": "IQ",
+                "attribute": "Empty",
                 "children": [
                   {
                     "targetNode": {
                       "splitRule": "NumericalSplit",
-                      "attribute": "Sick",
+                      "attribute": "Empty",
                       "children": [
-                        null,
-                        null
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
                       ]
                     },
-                    "split": "==80"
+                    "split": "Empty"
                   },
                   {
                     "targetNode": {
                       "splitRule": "NumericalSplit",
-                      "attribute": "Healthy",
+                      "attribute": "Empty",
                       "children": [
-                        null,
-                        null
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
                       ]
                     },
-                    "split": "!=80"
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
                   }
                 ]
               },
-              "split": ">=50"
+              "split": "Empty"
             }
           ]
         },
-        "split": ">1,60"
+        "split": "Empty"
       },
       {
         "targetNode": {
           "splitRule": "NumericalSplit",
-          "attribute": "age",
+          "attribute": "Empty",
           "children": [
             {
               "targetNode": {
                 "splitRule": "NumericalSplit",
-                "attribute": "Healthy",
+                "attribute": "Empty",
                 "children": [
-                  null,
-                  null
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
                 ]
               },
-              "split": ">30"
+              "split": "Empty"
             },
             {
               "targetNode": {
                 "splitRule": "NumericalSplit",
-                "attribute": "Sick",
+                "attribute": "Empty",
                 "children": [
-                  null,
-                  null
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
                 ]
               },
-              "split": "<=30"
+              "split": "Empty"
             }
           ]
         },
-        "split": "<=1,60"
+        "split": "Empty"
+      },
+      {
+        "targetNode": {
+          "splitRule": "NumericalSplit",
+          "attribute": "Empty",
+          "children": [
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            }
+          ]
+        },
+        "split": "Empty"
+      },
+      {
+        "targetNode": {
+          "splitRule": "NumericalSplit",
+          "attribute": "Empty",
+          "children": [
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            },
+            {
+              "targetNode": {
+                "splitRule": "NumericalSplit",
+                "attribute": "Empty",
+                "children": [
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  },
+                  {
+                    "targetNode": {
+                      "splitRule": "NumericalSplit",
+                      "attribute": "Empty",
+                      "children": [
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        },
+                        {
+                          "targetNode": {
+                            "splitRule": "NumericalSplit",
+                            "attribute": "Empty",
+                            "children": [
+                              null,
+                              null
+                            ]
+                          },
+                          "split": "Empty"
+                        }
+                      ]
+                    },
+                    "split": "Empty"
+                  }
+                ]
+              },
+              "split": "Empty"
+            }
+          ]
+        },
+        "split": "Empty"
       }
     ]
   }

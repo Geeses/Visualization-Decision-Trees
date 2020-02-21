@@ -11,7 +11,7 @@ public class Node
     {
         splitRule = "NumericalSplit";
         attribute = "Empty";
-        children = new Edge[2];
+        children = new Edge[0];
     }
 
     public Node(string _splitrule, string _attribute, Edge[] _children)
